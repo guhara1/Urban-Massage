@@ -5,8 +5,11 @@ const { layout, esc, url } = require('./render');
 const { whoHowWhy, policyNote, relatedLinks } = require('./blocks');
 const { areas, regions, programs, usePages, checkPages } = require('./data');
 const { cities } = require('./expand');
-const { lifeAreas } = require('./expand-life');
+const { lifeAreas: lifeAreasA } = require('./expand-life');
+const { lifeAreas: lifeAreasB } = require('./expand-life2');
+const lifeAreas = [...lifeAreasA, ...lifeAreasB];
 const { stations, useSpecial } = require('./expand-more');
+const { combos } = require('./combos');
 
 const ROOT = path.resolve(__dirname, '..');
 const B = site.base; // /central-honam-gangwon
@@ -213,7 +216,8 @@ ${whoHowWhy(r.name)}
     (cities[r.slug] || []).forEach((c) => {
       const dp = `${B}/${r.slug}/${c.slug}/`;
       const dcr = [...crumbs, { name: c.name, path: dp }];
-      const lifeLinks = (c.life || []).map(resolveLink).filter(Boolean);
+      const lifeSlugs = Array.from(new Set([...(c.life || []), ...lifeAreas.filter((l) => l.city === c.slug).map((l) => l.slug)]));
+      const lifeLinks = lifeSlugs.map(resolveLink).filter(Boolean);
       const relCity = (c.related || []).map((s) => cityBy(s)).filter(Boolean).map((x) => ({ label: x.name, path: `${B}/${r.slug}/${x.slug}/` }));
       const progLinks = (c.programs || []).map(progLinkOf).filter(Boolean);
       const dbody = `
@@ -272,6 +276,13 @@ function buildAreas() {
       const r = areaBy(s);
       return r ? { label: r.name, path: `${B}/area/${r.slug}/` } : null;
     }).filter(Boolean);
+    const comboLinks = combos
+      .filter((cb) => cb.area === a.slug)
+      .map((cb) => {
+        const sp = programs.find((y) => y.slug === cb.program);
+        return sp ? { label: `${a.name} ${sp.name}`, path: `${B}/area/${a.slug}/${sp.slug}/` } : null;
+      })
+      .filter(Boolean);
 
     const body = `
 <section class="section"><div class="container">
@@ -313,6 +324,7 @@ function buildAreas() {
 </div></section>
 
 ${relatedLinks('이 지역에서 자주 찾는 프로그램', progLinks)}
+${comboLinks.length ? relatedLinks('생활권 × 프로그램 안내', comboLinks) : ''}
 ${relatedLinks('관련 지역 보기', relLinks)}
 
 ${whoHowWhy(a.name)}
@@ -454,6 +466,13 @@ function buildPrograms() {
     const p = `${B}/program/${pr.slug}/`;
     const crumbs = [homeCrumb, { name: '마사지 프로그램', path: pIndex }, { name: pr.name, path: p }];
     const areaLinks = pr.areas.map(resolveLink).filter(Boolean);
+    const comboLinks = combos
+      .filter((cb) => cb.program === pr.slug)
+      .map((cb) => {
+        const a = areaBy(cb.area);
+        return a ? { label: `${a.name} ${pr.name}`, path: `${B}/area/${a.slug}/${pr.slug}/` } : null;
+      })
+      .filter(Boolean);
     const body = `
 <section class="section"><div class="container">
   <p class="eyebrow">마사지 프로그램</p>
@@ -469,6 +488,7 @@ function buildPrograms() {
   ${policyNote()}
 </div></section>
 ${relatedLinks(`${pr.name}를 자주 찾는 지역`, areaLinks)}
+${comboLinks.length ? relatedLinks(`지역별 ${pr.name} 안내`, comboLinks) : ''}
 `;
     out(p, layout({
       path: p, title: pr.title, desc: pr.desc, breadcrumbs: crumbs, body,
@@ -478,6 +498,65 @@ ${relatedLinks(`${pr.name}를 자주 찾는 지역`, areaLinks)}
         { q: '불법·선정적 서비스도 가능한가요?', a: '불법·선정적 서비스는 제공하거나 안내하지 않습니다.' },
       ],
     }), { priority: 0.7 });
+  });
+}
+
+// ─────────────────────────────────────────────
+// 4-b. 지역 × 프로그램 롱테일 조합 페이지
+// ─────────────────────────────────────────────
+function buildCombos() {
+  combos.forEach((cb) => {
+    const a = areaBy(cb.area);
+    const pr = programs.find((x) => x.slug === cb.program);
+    if (!a || !pr) return;
+    const region = regionBy(a.region);
+    const p = `${B}/area/${a.slug}/${pr.slug}/`;
+    const crumbs = [
+      homeCrumb,
+      { name: region.name, path: `${B}/${region.slug}/` },
+      { name: a.name, path: `${B}/area/${a.slug}/` },
+      { name: pr.name, path: p },
+    ];
+    // 같은 생활권의 다른 조합(내부링크)
+    const siblings = combos
+      .filter((x) => x.area === cb.area && x.program !== cb.program)
+      .map((x) => {
+        const sp = programs.find((y) => y.slug === x.program);
+        return sp ? { label: `${a.name} ${sp.name}`, path: `${B}/area/${a.slug}/${sp.slug}/` } : null;
+      })
+      .filter(Boolean);
+    const title = `${a.name} ${pr.name}｜생활권 이용 안내`;
+    const desc = `${a.name}에서 ${pr.name}를 찾을 때 참고할 생활권·숙소 이용 기준 안내.`;
+    const body = `
+<section class="section"><div class="container">
+  <p class="eyebrow">${esc(region.name)} · ${esc(a.name)} · ${esc(pr.name)}</p>
+  <h1>${esc(a.name)} ${esc(pr.name)} 안내</h1>
+  <p class="lead">${esc(cb.angle)}</p>
+  <div class="hero-cta"><a class="btn btn-primary btn-lg" href="tel:${site.tel}">전화예약 ${esc(site.tel)}</a><a class="btn btn-ghost btn-lg" href="${B}/area/${a.slug}/">${esc(a.name)} 생활권</a></div>
+</div></section>
+<section class="section"><div class="container prose-narrow article">
+  <h2>${esc(a.name)}에서 ${esc(pr.name)}가 맞는 이유</h2>
+  <p>${esc(cb.angle)}</p>
+  <h2>${esc(pr.name)}는 어떤 프로그램인가요</h2>
+  <p>${esc(pr.intro)} 자세한 내용은 <a href="${B}/program/${pr.slug}/">${esc(pr.name)} 프로그램 안내</a>에서 확인할 수 있습니다.</p>
+  <h2>이 생활권 이용 전 확인</h2>
+  <p>${esc(a.name)}는 ${esc(a.includes.slice(0, 4).join('·'))} 등 생활권으로 나뉘며, 숙소 유형과 건물 출입 방식이 구역마다 다릅니다. 방문 가능 여부는 실제 주소와 예약 조건을 확인한 뒤 안내합니다. 자세한 지역 정보는 <a href="${B}/area/${a.slug}/">${esc(a.name)} 안내</a>를 참고하세요.</p>
+  <ul>
+    <li>정확한 <a href="${B}/check/address/">주소·건물명</a>과 예약자명</li>
+    <li><a href="${B}/check/building-access/">건물 출입</a> 방식과 예약 가능 <a href="${B}/check/time/">시간대</a></li>
+  </ul>
+  ${policyNote()}
+</div></section>
+${siblings.length ? relatedLinks(`${a.name}의 다른 프로그램`, siblings) : ''}
+${relatedLinks('프로그램 · 지역 더 보기', [{ label: `${pr.name} 전체 안내`, path: `${B}/program/${pr.slug}/` }, { label: `${region.name} 안내`, path: `${B}/${region.slug}/` }])}`;
+    out(p, layout({
+      path: p, title, desc, breadcrumbs: crumbs, body,
+      faq: [
+        { q: `${a.name}에서 ${pr.name}를 이용할 수 있나요?`, a: `${cb.angle} 실제 주소·숙소 유형·예약 조건을 확인한 뒤 안내합니다.` },
+        { q: '어디서 받을 수 있나요?', a: '자택·호텔·오피스텔·리조트 등 숙소 유형과 실제 주소, 건물 출입 방식을 확인한 뒤 안내합니다.' },
+        { q: '불법·선정적 서비스도 가능한가요?', a: '불법·선정적 서비스는 제공하거나 안내하지 않습니다.' },
+      ],
+    }), { priority: 0.55 });
   });
 }
 
@@ -598,6 +677,7 @@ ${group('12대 생활권', areas.map((a) => ({ label: a.name, path: `${B}/area/$
 ${group('핵심 생활권', lifeAreas.map((l) => ({ label: l.name, path: `${B}/life/${l.slug}/` })))}
 ${group('역·터미널 거점', stations.map((s) => ({ label: s.name, path: `${B}/station/${s.slug}/` })))}
 ${group('프로그램', programs.map((p) => ({ label: p.name, path: `${B}/program/${p.slug}/` })))}
+${group('지역 × 프로그램', combos.map((cb) => { const a = areaBy(cb.area); const pr = programs.find((x) => x.slug === cb.program); return { label: `${a.name} ${pr.name}`, path: `${B}/area/${a.slug}/${pr.slug}/` }; }))}
 ${group('이용 장소', usePages.map((u) => ({ label: u.name, path: `${B}/use/${u.slug}/` })))}
 ${group('산업·혁신·관광 숙소', useSpecial.map((u) => ({ label: u.name, path: `${B}/use/${u.slug}/` })))}
 ${group('예약 전 확인', checkPages.map((c) => ({ label: c.name, path: `${B}/check/${c.slug}/` })))}
@@ -647,6 +727,7 @@ function run() {
   buildLife();
   buildStations();
   buildPrograms();
+  buildCombos();
   buildUseCheck();
   buildStatic();
   copyAssets();

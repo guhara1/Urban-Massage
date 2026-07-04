@@ -693,14 +693,8 @@ ${group('안내', [{ label: '운영 기준', path: `${B}/policy/` }, { label: '�
 function copyAssets() {
   const srcDir = path.join(ROOT, 'assets');
   const dstDir = path.join(ROOT, B.replace(/^\//, ''), 'assets');
+  // assets/ 전체(css·js·img: 파비콘/OG/매니페스트 포함)를 출력으로 복사
   fs.cpSync(srcDir, dstDir, { recursive: true });
-  // 이미지 자산(OG/파비콘) 생성
-  const imgDir = path.join(dstDir, 'img');
-  fs.mkdirSync(imgDir, { recursive: true });
-  const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0b1120"/><rect x="10" y="10" width="44" height="44" rx="12" fill="url(#g)"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a2b"/><stop offset="1" stop-color="#ff6a00"/></linearGradient></defs><text x="32" y="42" font-family="Pretendard,sans-serif" font-size="26" font-weight="800" fill="#fff" text-anchor="middle">G</text></svg>`;
-  fs.writeFileSync(path.join(imgDir, 'favicon.svg'), favicon);
-  const og = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e1626"/><stop offset="1" stop-color="#0b1120"/></linearGradient><linearGradient id="o" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a2b"/><stop offset="1" stop-color="#ff6a00"/></linearGradient></defs><rect width="1200" height="630" fill="url(#bg)"/><circle cx="1050" cy="90" r="260" fill="#ff7a18" opacity="0.12"/><rect x="90" y="240" width="70" height="70" rx="18" fill="url(#o)"/><text x="180" y="298" font-family="Pretendard,sans-serif" font-size="52" font-weight="800" fill="#fff">간다GO</text><text x="90" y="410" font-family="Pretendard,sans-serif" font-size="56" font-weight="800" fill="#eef2f9">천안·대전·호남·강원 출장마사지</text><text x="90" y="480" font-family="Pretendard,sans-serif" font-size="34" font-weight="600" fill="#c3cede">생활권별 방문 가능 지역 안내</text><text x="90" y="560" font-family="Pretendard,sans-serif" font-size="30" font-weight="700" fill="#ff9e3d">전화예약 0508-202-4719</text></svg>`;
-  fs.writeFileSync(path.join(imgDir, 'og-default.svg'), og);
 }
 
 function buildRootAndSeo() {

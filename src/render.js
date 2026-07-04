@@ -195,6 +195,9 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="robo
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${canonical}">
 <meta property="og:image" content="${og}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="${site.locale}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b1120">
@@ -202,7 +205,12 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="robo
 <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="${site.base}/assets/css/tokens.css">
 <link rel="stylesheet" href="${site.base}/assets/css/style.css">
-<link rel="icon" href="${site.base}/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="${site.base}/assets/img/favicon.ico" sizes="48x48">
+<link rel="icon" href="${site.base}/assets/img/favicon.svg" type="image/svg+xml" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="${site.base}/assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="${site.base}/assets/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="${site.base}/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="${site.base}/assets/img/site.webmanifest">
 <script type="application/ld+json">${schema}</script>
 </head>
 <body>

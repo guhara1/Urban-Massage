@@ -15,7 +15,7 @@ const site = {
     web: 'https://t.me/gandago_web', // 웹사이트 제작문의
     partner: 'https://t.me/gandago_ad', // 제휴문의
   },
-  defaultOgImage: '/central-honam-gangwon/assets/img/og-default.svg',
+  defaultOgImage: '/central-honam-gangwon/assets/img/og-default.png',
   locale: 'ko_KR',
   regionTag: '중부·호남·강원',
 };

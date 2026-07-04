@@ -10,6 +10,14 @@ const { lifeAreas: lifeAreasB } = require('./expand-life2');
 const lifeAreas = [...lifeAreasA, ...lifeAreasB];
 const { stations, useSpecial } = require('./expand-more');
 const { combos } = require('./combos');
+const { honamSecondary } = require('./expand-gun2');
+
+// 전북·전남 2차 군 지역을 호남 도시 목록에 병합(allCities 계산 전에 수행) + 권역 내부링크 연결
+cities.honam.push(...honamSecondary);
+{
+  const _honam = regions.find((r) => r.slug === 'honam');
+  honamSecondary.forEach((c) => _honam.districts.push({ slug: c.slug, name: c.name }));
+}
 
 const ROOT = path.resolve(__dirname, '..');
 const B = site.base; // /central-honam-gangwon

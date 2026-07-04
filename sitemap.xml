@@ -2,9 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://gandago.co.kr/central-honam-gangwon/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/cheonan/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/cheonan/seobuk-gu/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/cheonan/dongnam-gu/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/daejeon/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/daejeon/seo-gu/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/daejeon/yuseong-gu/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/daejeon/dong-gu/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/daejeon/jung-gu/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/daejeon/daedeok-gu/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/gwangju/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/jeonju-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/iksan-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/gunsan-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/jeongeup-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/namwon-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/gimje-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/yeosu-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/suncheon-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/gwangyang-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/mokpo-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/honam/naju-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/chuncheon-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/wonju-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/gangneung-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/sokcho-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/donghae-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/samcheok-si/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/hongcheon-gun/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/pyeongchang-gun/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/jeongseon-gun/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/yangyang-gun/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/gangwon/goseong-gun/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/area/cheonan-buldang-dujeong/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/area/daejeon-dunsan-yuseong/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/area/daejeon-station-daedeok/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -17,6 +47,55 @@
   <url><loc>https://gandago.co.kr/central-honam-gangwon/area/wonju-hoengseong/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/area/gangneung-donghae-samcheok/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/area/sokcho-pyeongchang-resort/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/cheonan-buldang-ssangyong/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/cheonan-dujeong-seongjeong/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/cheonan-sinbu-terminal/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/cheonan-asan-station/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/seonghwan-jiksan/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/daejeon-dunsan-tanbang/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/yuseong-bongmyeong/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/daejeon-station-yongjeon/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/daejeon-eunhaeng-daeheung/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/doan-gwanjeo/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/daedeok-sinchangjin/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/gwangju-sangmu-gwangcheon/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/gwangju-suwan-cheomdan/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/gwangju-downtown/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/gwangju-songjeong-station/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/chuncheon-myeongdong-jungangro/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/chuncheon-onui-toegye/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/wonju-musil-dangye/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/wonju-bangok-innovation/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/gangneung-gyodong-yucheon/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/gangneung-gyeongpo-anmok/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/sokcho-joyang-gyodong/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/yangyang-naksan-ingu/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/pyeongchang-daegwallyeong-yongpyong/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/life/jeongseon-high1-resort/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/cheonan-asan-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/cheonan-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/dujeong-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/cheonan-terminal/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/daejeon-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/seodaejeon-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/yuseong-terminal/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/dunsan-government-complex/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/gwangju-songjeong-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/gwangju-terminal/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/jeonju-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/iksan-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/gunsan-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/yeosu-expo-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/suncheon-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/mokpo-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/chuncheon-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/namchuncheon-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/wonju-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/gangneung-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/sokcho-terminal/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/pyeongchang-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/station/jinbu-station/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/program/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/program/swedish/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/program/thai-massage/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -28,6 +107,22 @@
   <url><loc>https://gandago.co.kr/central-honam-gangwon/program/couple/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/program/night/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/use/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/cheonan-asan-station-stay/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/daedeok-research-area/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/sejong-nearby-link/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/jeonju-innovation-city/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/naju-innovation-city/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/yeosu-industrial-area/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/gwangyang-port-industrial/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/gunsan-saemangeum-industrial/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/gangneung-beach-stay/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/sokcho-beach-daepo-stay/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/yangyang-surf-beach-stay/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/pyeongchang-resort/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/high1-resort-stay/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/vivaldi-park-stay/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/pension-private-stay/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://gandago.co.kr/central-honam-gangwon/use/winter-road-check/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/use/home/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/use/hotel/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://gandago.co.kr/central-honam-gangwon/use/officetel/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>

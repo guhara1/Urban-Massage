@@ -15,6 +15,7 @@ function header() {
     ['호남권', `${b}/honam/`],
     ['강원권', `${b}/gangwon/`],
     ['프로그램', `${b}/program/`],
+    ['역·터미널', `${b}/station/`],
     ['이용 장소', `${b}/use/`],
     ['예약 전 확인', `${b}/check/`],
   ];

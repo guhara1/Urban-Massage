@@ -36,15 +36,15 @@ p { margin: 0 0 1em; color: var(--text-2); }
   background: color-mix(in srgb, var(--bg) 78%, transparent);
   border-bottom: 1px solid var(--line);
 }
-.nav { display: flex; align-items: center; gap: 18px; height: var(--header-h); }
-.brand { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; }
-.brand .dot { width: 26px; height: 26px; border-radius: 8px; background: var(--brand-grad); box-shadow: var(--brand-glow); display: grid; place-items: center; color: #fff; font-size: 0.8rem; }
-.nav-links { display: flex; gap: 4px; margin-left: auto; }
-.nav-links a { padding: 9px 12px; border-radius: var(--r-sm); font-size: 0.94rem; color: var(--text-2); font-weight: 600; transition: 0.18s; }
+.nav { display: flex; align-items: center; gap: 12px; height: var(--header-h); }
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; white-space: nowrap; }
+.brand .dot { width: 26px; height: 26px; border-radius: 8px; background: var(--brand-grad); box-shadow: var(--brand-glow); display: grid; place-items: center; color: #fff; font-size: 0.8rem; flex: none; }
+.nav-links { display: flex; gap: 2px; margin-left: auto; }
+.nav-links a { padding: 8px 10px; border-radius: var(--r-sm); font-size: 0.9rem; color: var(--text-2); font-weight: 600; white-space: nowrap; transition: 0.18s; }
 .nav-links a:hover { color: var(--text); background: var(--surface-2); }
-.nav-cta { margin-left: 6px; }
+.nav-cta { margin-left: 4px; white-space: nowrap; font-size: 0.86rem; padding: 10px 14px; }
 .nav-toggle { display: none; margin-left: auto; background: var(--surface-2); border: 1px solid var(--line); color: var(--text); width: 42px; height: 42px; border-radius: var(--r-sm); font-size: 1.2rem; cursor: pointer; }
-@media (max-width: 900px) {
+@media (max-width: 1040px) {
   .nav-links { position: fixed; inset: var(--header-h) 0 auto 0; flex-direction: column; gap: 2px; background: var(--bg-2); border-bottom: 1px solid var(--line); padding: 10px var(--gutter) 18px; margin: 0; transform: translateY(-120%); transition: 0.28s; box-shadow: var(--shadow-2); }
   .nav-links.open { transform: translateY(0); }
   .nav-toggle { display: block; }

@@ -7,14 +7,30 @@
 
 ```
 src/
-  config.js   상호·전화·텔레그램·도메인 등 전역 설정
-  data.js     4대 권역 · 12대 생활권 · 프로그램 · 이용/확인 페이지 콘텐츠
-  render.js   레이아웃 · JSON-LD 스키마 · 헤더/푸터/전화 FAB
-  blocks.js   Who·How·Why, 불법·선정 불가, 내부링크 블록
-  build.js    정적 페이지 생성기
-assets/       tokens.css(프리미엄 팔레트) · style.css · main.js
-central-honam-gangwon/   생성된 사이트 (배포 대상)
+  config.js        상호·전화·텔레그램·도메인 등 전역 설정
+  data.js          4대 권역 · 12대 생활권 · 프로그램 · 이용/확인 페이지
+  expand.js        시·군 도시 30개(천안2·대전5·호남12·강원11)
+  expand-life.js   핵심 생활권(life) 25개
+  expand-more.js   역·터미널 거점 23개 · 산업/관광 특화 use 16개
+  render.js        레이아웃 · JSON-LD 스키마 · 헤더/푸터/전화 FAB
+  blocks.js        Who·How·Why, 불법·선정 불가, 내부링크 블록
+  build.js         정적 페이지 생성기
+assets/            tokens.css(프리미엄 팔레트) · style.css · main.js
+central-honam-gangwon/   생성된 사이트 (배포 대상, 총 156p)
 ```
+
+## 페이지 구성 (156p, 전부 색인 대상)
+
+| 구분 | 수 |
+|---|---|
+| 메인 · 권역(4) · 사이트맵/정책/문의 등 | 11 |
+| 시·군 도시 (실제 콘텐츠) | 30 |
+| 12대 광역 생활권 | 12 |
+| 핵심 생활권(life) | 25 |
+| 역·터미널 거점 + 인덱스 | 24 |
+| 프로그램 + 인덱스 | 10 |
+| 이용 장소 + 산업/관광 특화 | 29 |
+| 예약 전 확인 + 인덱스 | 17 |
 
 ## 빌드
 

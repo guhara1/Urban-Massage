@@ -1,0 +1,73 @@
+/* ─────────────────────────────────────────────────────────────
+   간다GO · 프리미엄 디자인 토큰
+   기존 토큰 시스템을 프리미엄 팔레트로 교체 + 컴포넌트 오버레이 기반.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* ── 브랜드 / 오렌지 ── */
+  --brand: #ff7a18;
+  --brand-strong: #ff6a00;
+  --brand-soft: #ff9e3d;
+  --brand-grad: linear-gradient(135deg, #ff8a2b 0%, #ff6a00 100%);
+  --brand-glow: 0 10px 30px -8px rgba(255, 122, 24, 0.55);
+  --brand-ring: rgba(255, 122, 24, 0.35);
+
+  /* ── 프리미엄 다크 네이비 표면 ── */
+  --bg: #0b1120;
+  --bg-2: #0e1626;
+  --surface: #131d30;
+  --surface-2: #182339;
+  --surface-3: #1f2c46;
+  --line: rgba(148, 163, 184, 0.16);
+  --line-strong: rgba(148, 163, 184, 0.28);
+
+  /* ── 텍스트 ── */
+  --text: #eef2f9;
+  --text-2: #c3cede;
+  --text-muted: #8a97ad;
+  --text-invert: #0b1120;
+
+  /* ── 보조 강조(프리미엄 골드/틸) ── */
+  --gold: #e8c37a;
+  --teal: #3fbfae;
+
+  /* ── 반경 / 그림자 ── */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-2: 0 14px 40px -18px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 20px 50px -28px rgba(0, 0, 0, 0.8);
+
+  /* ── 타이포 ── */
+  --font: 'Pretendard', 'Pretendard Variable', -apple-system, BlinkMacSystemFont,
+    'Apple SD Gothic Neo', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --fs-hero: clamp(1.9rem, 4.6vw, 3.1rem);
+  --fs-h2: clamp(1.35rem, 3vw, 2rem);
+  --fs-h3: clamp(1.05rem, 2vw, 1.3rem);
+  --lh: 1.75;
+
+  /* ── 레이아웃 ── */
+  --maxw: 1160px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --header-h: 66px;
+}
+
+/* 라이트 모드 오버레이(옵션): 시스템 선호 밝음 */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --bg: #f6f8fc;
+    --bg-2: #eef2f8;
+    --surface: #ffffff;
+    --surface-2: #f4f7fb;
+    --surface-3: #eaf0f8;
+    --line: rgba(15, 23, 42, 0.1);
+    --line-strong: rgba(15, 23, 42, 0.16);
+    --text: #131d30;
+    --text-2: #33415c;
+    --text-muted: #64748b;
+    --text-invert: #ffffff;
+    --shadow-2: 0 14px 40px -20px rgba(15, 23, 42, 0.28);
+    --shadow-card: 0 20px 50px -30px rgba(15, 23, 42, 0.28);
+  }
+}

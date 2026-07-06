@@ -5,9 +5,9 @@ const site = {
   brand: '간다GO',
   brandEn: 'GandaGO',
   // 사이트가 배포될 최종 도메인. schema/canonical/og 에 사용됩니다.
-  origin: 'https://gandago.co.kr',
-  // 사이트 루트 경로(서브디렉터리 배포 시 대비)
-  base: '/central-honam-gangwon',
+  origin: 'https://urban-massage.pages.dev',
+  // 사이트 루트 경로. 루트 도메인 서빙이면 '' (서브디렉터리 배포 시 '/foo').
+  base: '',
   tel: '0508-202-4719',
   telDigits: '0508-202-4719',
   // ⚠️ 텔레그램 핸들: 실제 계정으로 교체하세요.
@@ -15,7 +15,7 @@ const site = {
     web: 'https://t.me/gandago_web', // 웹사이트 제작문의
     partner: 'https://t.me/gandago_ad', // 제휴문의
   },
-  defaultOgImage: '/central-honam-gangwon/assets/img/og-default.png',
+  defaultOgImage: '/assets/img/og-default.png',
   locale: 'ko_KR',
   regionTag: '중부·호남·강원',
 };

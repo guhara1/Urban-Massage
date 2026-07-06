@@ -15,9 +15,16 @@ src/
   render.js        레이아웃 · JSON-LD 스키마 · 헤더/푸터/전화 FAB
   blocks.js        Who·How·Why, 불법·선정 불가, 내부링크 블록
   build.js         정적 페이지 생성기
-assets/            tokens.css(프리미엄 팔레트) · style.css · main.js
-central-honam-gangwon/   생성된 사이트 (배포 대상, 총 156p)
+assets/            tokens.css(블랙 팔레트) · style.css · main.js · img(파비콘·OG·hero)
+(루트)             생성된 사이트가 저장소 루트에 출력됩니다(Cloudflare Pages 루트 서빙)
 ```
+
+## 배포 / 경로
+
+- 루트 도메인 서빙: `src/config.js`의 `base: ''` → 모든 페이지가 `https://<도메인>/...`
+- 도메인: `src/config.js`의 `origin`(현재 `https://urban-massage.pages.dev`)
+- 구 경로(`/central-honam-gangwon/*`)는 `_redirects`로 루트에 301 리다이렉트
+- **히어로 이미지**: `assets/img/hero.jpg` 파일을 교체하면 홈 히어로 우측에 반영됩니다(4:5 권장).
 
 ## 페이지 구성 (156p, 전부 색인 대상)
 

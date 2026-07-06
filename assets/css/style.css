@@ -5,9 +5,10 @@ body {
   margin: 0;
   font-family: var(--font);
   background:
-    radial-gradient(1200px 600px at 78% -10%, rgba(255, 122, 24, 0.10), transparent 60%),
-    radial-gradient(900px 500px at 0% 0%, rgba(63, 191, 174, 0.07), transparent 55%),
+    radial-gradient(1200px 600px at 82% -12%, rgba(255, 122, 24, 0.13), transparent 60%),
+    radial-gradient(900px 520px at -5% 4%, rgba(255, 122, 24, 0.05), transparent 55%),
     var(--bg);
+  background-attachment: fixed;
   color: var(--text);
   line-height: var(--lh);
   font-size: 16px;
@@ -65,6 +66,16 @@ p { margin: 0 0 1em; color: var(--text-2); }
 .hero h1 { font-size: var(--fs-hero); font-weight: 800; max-width: 20ch; }
 .hero .lead { margin-top: 6px; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+/* 히어로 2단: 좌 카피 · 우 이미지 */
+.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(24px, 5vw, 56px); align-items: center; }
+.hero-media { margin: 0; position: relative; }
+.hero-media::before { content: ''; position: absolute; inset: -12% -8% auto auto; width: 62%; height: 62%; background: radial-gradient(circle, rgba(255,122,24,0.28), transparent 68%); filter: blur(10px); z-index: 0; }
+.hero-media img { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-lg); border: 1px solid var(--line-strong); box-shadow: var(--shadow-card); background: var(--surface-2); }
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-media { max-width: 460px; margin: 8px auto 0; }
+  .hero-media img { aspect-ratio: 16 / 10; }
+}
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
 .chip { padding: 7px 14px; border-radius: var(--r-pill); background: var(--surface-2); border: 1px solid var(--line); color: var(--text-2); font-size: 0.85rem; font-weight: 600; }
 

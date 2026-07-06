@@ -11,20 +11,20 @@
   --brand-glow: 0 10px 30px -8px rgba(255, 122, 24, 0.55);
   --brand-ring: rgba(255, 122, 24, 0.35);
 
-  /* ── 프리미엄 다크 네이비 표면 ── */
-  --bg: #0b1120;
-  --bg-2: #0e1626;
-  --surface: #131d30;
-  --surface-2: #182339;
-  --surface-3: #1f2c46;
-  --line: rgba(148, 163, 184, 0.16);
-  --line-strong: rgba(148, 163, 184, 0.28);
+  /* ── 프리미엄 블랙 표면 (전 페이지 블랙톤) ── */
+  --bg: #070708;
+  --bg-2: #0d0d0f;
+  --surface: #141416;
+  --surface-2: #1a1a1d;
+  --surface-3: #242427;
+  --line: rgba(255, 255, 255, 0.10);
+  --line-strong: rgba(255, 255, 255, 0.18);
 
-  /* ── 텍스트 ── */
-  --text: #eef2f9;
-  --text-2: #c3cede;
-  --text-muted: #8a97ad;
-  --text-invert: #0b1120;
+  /* ── 텍스트 (밝은톤) ── */
+  --text: #f4f5f7;
+  --text-2: #c9ccd2;
+  --text-muted: #9195a0;
+  --text-invert: #070708;
 
   /* ── 보조 강조(프리미엄 골드/틸) ── */
   --gold: #e8c37a;
@@ -53,21 +53,6 @@
   --header-h: 66px;
 }
 
-/* 라이트 모드 오버레이(옵션): 시스템 선호 밝음 */
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme='dark']) {
-    --bg: #f6f8fc;
-    --bg-2: #eef2f8;
-    --surface: #ffffff;
-    --surface-2: #f4f7fb;
-    --surface-3: #eaf0f8;
-    --line: rgba(15, 23, 42, 0.1);
-    --line-strong: rgba(15, 23, 42, 0.16);
-    --text: #131d30;
-    --text-2: #33415c;
-    --text-muted: #64748b;
-    --text-invert: #ffffff;
-    --shadow-2: 0 14px 40px -20px rgba(15, 23, 42, 0.28);
-    --shadow-card: 0 20px 50px -30px rgba(15, 23, 42, 0.28);
-  }
-}
+/* 전 페이지 블랙톤 고정 — 라이트 모드 오버레이는 사용하지 않습니다.
+   (시스템이 밝은 모드여도 배경은 블랙, 글씨는 밝은톤으로 유지) */
+:root { color-scheme: dark; }

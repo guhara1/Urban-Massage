@@ -97,24 +97,29 @@ function buildHome() {
   ];
 
   const body = `
-<section class="hero"><div class="container">
-  <p class="eyebrow">중부·호남·강원 출장마사지 · 생활권 안내</p>
-  <h1>천안·대전·호남·강원 출장마사지<br>생활권별 방문 가능 지역 안내</h1>
-  <p class="lead">천안 불당, 대전 둔산·유성, 광주 상무, 전주, 여수, 춘천, 원주, 강릉, 속초 등 주요 생활권과 호텔·오피스텔·펜션·리조트 이용 전 확인사항을 안내합니다.</p>
-  <div class="hero-cta">
-    <a class="btn btn-primary btn-lg" href="tel:${site.tel}">전화예약 ${esc(site.tel)}</a>
-    <a class="btn btn-ghost btn-lg" href="${B}/program/">마사지 프로그램</a>
-    <a class="btn btn-ghost btn-lg" href="${B}/check/">예약 전 확인</a>
+<section class="hero"><div class="container hero-grid">
+  <div class="hero-copy">
+    <p class="eyebrow">중부·호남·강원 출장마사지 · 생활권 안내</p>
+    <h1>천안·대전·호남·강원 출장마사지<br>생활권별 방문 가능 지역 안내</h1>
+    <p class="lead">천안 불당, 대전 둔산·유성, 광주 상무, 전주, 여수, 춘천, 원주, 강릉, 속초 등 주요 생활권과 호텔·오피스텔·펜션·리조트 이용 전 확인사항을 안내합니다.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="tel:${site.tel}">전화예약 ${esc(site.tel)}</a>
+      <a class="btn btn-ghost btn-lg" href="${B}/program/">마사지 프로그램</a>
+      <a class="btn btn-ghost btn-lg" href="${B}/check/">예약 전 확인</a>
+    </div>
+    <div class="chip-row">
+      <a class="chip" href="${B}/cheonan/">천안권</a>
+      <a class="chip" href="${B}/daejeon/">대전권</a>
+      <a class="chip" href="${B}/honam/">호남권</a>
+      <a class="chip" href="${B}/gangwon/">강원권</a>
+      <a class="chip" href="${B}/area/cheonan-buldang-dujeong/">불당·두정</a>
+      <a class="chip" href="${B}/area/daejeon-dunsan-yuseong/">둔산·유성</a>
+      <a class="chip" href="${B}/area/gangneung-donghae-samcheok/">강릉·동해</a>
+    </div>
   </div>
-  <div class="chip-row">
-    <a class="chip" href="${B}/cheonan/">천안권</a>
-    <a class="chip" href="${B}/daejeon/">대전권</a>
-    <a class="chip" href="${B}/honam/">호남권</a>
-    <a class="chip" href="${B}/gangwon/">강원권</a>
-    <a class="chip" href="${B}/area/cheonan-buldang-dujeong/">불당·두정</a>
-    <a class="chip" href="${B}/area/daejeon-dunsan-yuseong/">둔산·유성</a>
-    <a class="chip" href="${B}/area/gangneung-donghae-samcheok/">강릉·동해</a>
-  </div>
+  <figure class="hero-media">
+    <img src="${B}/assets/img/hero.jpg" alt="간다GO 천안·대전·호남·강원 출장마사지 안내" width="720" height="820" loading="eager" decoding="async">
+  </figure>
 </div></section>
 
 <section class="section"><div class="container prose-narrow article">
@@ -701,14 +706,20 @@ ${group('안내', [{ label: '운영 기준', path: `${B}/policy/` }, { label: '�
 function copyAssets() {
   const srcDir = path.join(ROOT, 'assets');
   const dstDir = path.join(ROOT, B.replace(/^\//, ''), 'assets');
-  // assets/ 전체(css·js·img: 파비콘/OG/매니페스트 포함)를 출력으로 복사
+  // 루트 도메인 서빙(base='')이면 assets/ 가 이미 /assets 경로이므로 복사 불필요.
+  if (path.resolve(srcDir) === path.resolve(dstDir)) return;
   fs.cpSync(srcDir, dstDir, { recursive: true });
 }
 
 function buildRootAndSeo() {
-  // 루트 → /central-honam-gangwon/ 리다이렉트
-  const redirect = `<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>간다GO</title><link rel="canonical" href="${url(B + '/')}"><meta http-equiv="refresh" content="0; url=${B}/"><meta name="robots" content="noindex,follow"></head><body><a href="${B}/">중부·호남·강원 출장마사지 안내로 이동</a><script>location.replace('${B}/');</script></body></html>`;
-  fs.writeFileSync(path.join(ROOT, 'index.html'), redirect);
+  // 서브디렉터리 배포일 때만 루트→base 리다이렉트를 둡니다. base='' 이면 홈이 곧 루트.
+  if (B) {
+    const redirect = `<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>간다GO</title><link rel="canonical" href="${url(B + '/')}"><meta http-equiv="refresh" content="0; url=${B}/"><meta name="robots" content="noindex,follow"></head><body><a href="${B}/">중부·호남·강원 출장마사지 안내로 이동</a><script>location.replace('${B}/');</script></body></html>`;
+    fs.writeFileSync(path.join(ROOT, 'index.html'), redirect);
+  }
+
+  // 구 경로(/central-honam-gangwon/*) → 루트 301 (Cloudflare Pages _redirects)
+  fs.writeFileSync(path.join(ROOT, '_redirects'), `/central-honam-gangwon/* /:splat 301\n`);
 
   // robots.txt
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${url('/sitemap.xml')}\n`);
